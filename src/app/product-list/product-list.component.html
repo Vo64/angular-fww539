@@ -1,0 +1,34 @@
+<h2>Produtos</h2>
+
+<!-- assign each index produtID-->
+<!-- Modify the product name anchor to include router link produtID
+
+The RouterLink directive gives the router control over the anchor element. In this case, the route, or URL, contains one fixed segment, /products, while the final segment is variable, inserting the id property of the current product. For example, the URL for a product with an id of 1 will be similar to https://getting-started-myfork.stackblitz.io/products/1.
+
+-->
+
+<div *ngFor="let product of products; index as productId">
+  <a [title]="product.name + ' details'" 
+    [routerLink]= "['/product', productId]">
+    {{ product.name }}
+  </a>
+
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+
+  <button (click)="share()">
+    Share
+  </button>
+
+  <app-product-alerts
+   [product]="product" 
+  (notify)="onNotify()">
+  </app-product-alerts>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
