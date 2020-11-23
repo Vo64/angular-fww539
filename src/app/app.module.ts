@@ -9,9 +9,7 @@ import { ProductListComponent } from "./product-list/product-list.component";
 import { ProductDetailsComponent } from "./product-details/product-details.component";
 import { ProductAlertsComponent } from "./product-alerts/product-alerts.component";
 
-
-
-   /* Registering a new router
+/* Registering a new router
     
     Generate a new component for product details. Give the component the name product-details.
     Reminder: In the file list, right-click the app folder, choose Angular Generator and Component.
@@ -24,11 +22,9 @@ import { ProductAlertsComponent } from "./product-alerts/product-alerts.componen
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-
       { path: "", component: ProductListComponent },
-      { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: "products/:productId", component: ProductDetailsComponent }
     ])
-    
   ],
   declarations: [
     AppComponent,
@@ -38,7 +34,6 @@ import { ProductAlertsComponent } from "./product-alerts/product-alerts.componen
   ],
   bootstrap: [AppComponent]
 })
-
 export class AppModule {}
 
 /*
